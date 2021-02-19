@@ -1,8 +1,4 @@
 class ReverseGeocoding {
-  //The response code of the operation. The 400 series is for client side (yours) error while 500 series for server side (ours) error, 200 for success.
-  int responseCode;
-  //The version of the API you’re connected to.
-  String version;
   // The house number of the location.
   String houseNumber;
   //The name of the location.
@@ -43,8 +39,6 @@ class ReverseGeocoding {
   String area;
 
   ReverseGeocoding.fromJson(Map<String, dynamic> json) {
-    responseCode = json["responseCode"] as int;
-    version = json["version"] as String;
     houseNumber = json["results"][0]["houseNumber"];
     houseName = json["results"][0]["houseName"];
     poi = json["results"][0]["poi"];
