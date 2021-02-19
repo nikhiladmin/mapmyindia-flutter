@@ -9,10 +9,10 @@ Internally use [Mapmyindia REST API](https://www.mapmyindia.com/api/advanced-map
 ## Table of Contents
 - [Installation](#installation)
 - [Documentation](#documentation)
-- [Upcoming Feature](#feature)
+- [Upcoming Feature](#upcoming_feature)
 - [License](#license)
 - [Issues](#issues)
-- [Want to contribute](#want to contribute)
+- [Want to contribute](#want_to_contribute)
 
 ## Installation
 
@@ -52,7 +52,7 @@ import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
   ```
   #### Code explaination
   
-  *MapMyIndiaGeocoding* class contain *getAddress(double,double)* method and it return Future<ReverseGeocoding> .
+  *MapMyIndiaGeocoding* class contain *getAddress(double,double)* method and it return ```Future<ReverseGeocoding>```.
   
   #### ReverseGeocoding Model 
     
@@ -78,7 +78,7 @@ import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
 |formattedAddress |  The complete human readable address string that is usually the complete postal address of the result. |
 |area     | in-case the co-ordinate lies in a country the name of the country would be returned or if the co-ordinate lies in an ocean, the name of the ocean will be returned.|
   
-## Upcoming Feature
+## Upcoming_Feature
 
 - Forward Geocoding
 - Autosuggest 
@@ -93,7 +93,7 @@ import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
 ## Issues
 Please file any issues, bugs or feature requests as an issue on our GitHub page. Commercial support is available, you can contact us at nikhilbcps@gmail.com.
 
-## Want to contribute
+## Want_to_contribute
 If you would like to contribute to the plugin (e.g. by improving the documentation, solving a bug or adding a cool new feature), please carefully review our code and send us your pull request.
 
 
