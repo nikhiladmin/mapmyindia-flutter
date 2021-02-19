@@ -1,7 +1,6 @@
 name: mapmyindia_flutter
 description: Unoffical MapMyIndia Flutter packages.
 version: 0.0.1
-author: Nikhil Kumar Singh <nikhilbcps@gmail.com>
 homepage: https://github.com/nikhiladmin/mapmyindia-flutter.git
 
 environment:
