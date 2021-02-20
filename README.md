@@ -8,6 +8,7 @@ Internally use [Mapmyindia REST API](https://www.mapmyindia.com/api/advanced-map
 
 ## Table of Contents
 - [Installation](#installation)
+- [Usage](#usage) 
 - [Documentation](#documentation)
 - [Upcoming Feature](#upcoming_feature)
 - [License](#license)
@@ -35,11 +36,17 @@ Now in your Dart code, you can use:
 ```
 import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
 ```
+## Usage
+  If you need to get latitude and longitude of your current location there is a package recommanded for you [Geolocator](https://pub.dev/packages/geolocator)
+
+
+  First you need to create an account on [Mapmyindia Signup](https://www.mapmyindia.com/api/signup). If you have allready an account then  [Mapmyindia Login](https://www.mapmyindia.com/api/login) . In reverse geocoding you will use the *REST API Key for Web/Android/iOS*.
+
 ## Documentation
 
-#### Reverse Geocoding 
+### Reverse Geocoding 
   
- First you need to create an account on [Mapmyindia Signup](https://www.mapmyindia.com/api/signup). If you have allready an account then  [Mapmyindia Login](https://www.mapmyindia.com/api/login) . In reverse geocoding you will use the *REST API Key for Web/Android/iOS*.
+  Reverse Geocoding is a process to give the closest matching address to a provided geographical coordinates (latitude/longitude). MapmyIndia reverse geocoding API provides real addresses along with nearest popular landmarks for any such geo-positions on the map.
 
   ```
   import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
@@ -77,13 +84,34 @@ import 'package:mapmyindia_flutter/mapmyindia_flutter.dart';
 |longitude      | The longitude of the location.                                       |
 |formattedAddress |  The complete human readable address string that is usually the complete postal address of the result. |
 |area     | in-case the co-ordinate lies in a country the name of the country would be returned or if the co-ordinate lies in an ocean, the name of the ocean will be returned.|
-  
+
+### Still Map Image 
+
+
+  The Still Map Image returns the map as an image which you can display on your application. The API lets you embed MapmyIndia Maps image according to geo-position, pixel size and zoom level of the map on your application without requiring any dynamic page loading. The image can be a retina image and markers can be added to the image to indicate position of any object.
+
+  ```
+   String mapImageUrl = MapMyIndiaStillMap("[API_KEY]")
+                              .getMapImage(
+                                  latitude,
+                                  longitude,
+                                 );
+  ```
+  Additional Parameter in *getMapImage()* method are -
+
+|   Parameter   |  Description  |
+| ------------- |:----------------------------------------------------------------------------------:|
+| markers     | Toptional markers that you may want to add to the map tile.  default Value List(centerLatitude,centerLongitude) | 
+| width     | The size of the image requested in pixels as Width.    |  
+| height     | The size of the image requested in pixels as Height.     | 
+| zoom       | The zoom level for which the image is requested. Ranges from 4 to 18 with 18 being the highest zoomed in level.                                 |
+| ssf         | scale factor indicating retina or non-retina tiles. 0→non-retina tiles. 1→retina tiles.                             |
+
 ## Upcoming_Feature
 
 - Forward Geocoding
 - Autosuggest 
 - eLOC
-- Still Map Image
 - Traveled Route Image
 
 ## License 

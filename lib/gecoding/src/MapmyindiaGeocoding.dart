@@ -23,7 +23,7 @@ class MapMyIndiaGeocoding {
       }
       final response = await http.get(
           "$baseUrl${this._apiKey}/rev_geocode?lat=$latitude&lng=$longitude&region=$region");
-      print(response.statusCode);
+
       final jsonResponseData = json.decode(response.body);
       if (500 <= response.statusCode && response.statusCode <= 599) {
         throw ClientSideException(jsonResponseData["error_description"]);
