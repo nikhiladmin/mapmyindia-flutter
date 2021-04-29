@@ -21,7 +21,7 @@ Internally use [Mapmyindia REST API](https://www.mapmyindia.com/api/advanced-map
  Add this to your package's pubspec.yaml file:
 ```
 dependencies:
-  mapmyindia_flutter: ^0.0.1
+  mapmyindia_flutter: ^1.0.7
 ```
 #### Install it
 You can install packages from the command line:
